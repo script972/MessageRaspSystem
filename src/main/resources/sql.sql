@@ -1,0 +1,1 @@
+INSERT INTO user(user.FirstName, user.LastName, user.SecondName) VALUES ("Евгений","Беркунский", "Юрьевич");

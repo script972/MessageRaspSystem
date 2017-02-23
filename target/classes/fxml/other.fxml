@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.script972.controller.MainController">
+   <children>
+      <TabPane layoutY="31.0" prefHeight="409.0" prefWidth="609.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+        <tabs>
+          <Tab text="Chat">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="270.0" layoutY="347.0" mnemonicParsing="false" onAction="#sendMessage" prefHeight="25.0" prefWidth="81.0" text="Колбаской" />
+                        <Label layoutX="61.0" layoutY="13.0" text="Тема" />
+                        <TextField fx:id="subject" layoutX="119.0" layoutY="10.0" prefHeight="25.0" prefWidth="231.0" />
+                        <Label layoutX="14.0" layoutY="56.0" text="Id получателя" />
+                        <Label layoutX="26.0" layoutY="93.0" text="сообщение" />
+                        <TextField fx:id="to" layoutX="119.0" layoutY="52.0" prefHeight="25.0" prefWidth="53.0" />
+                        <TextArea fx:id="message" layoutX="119.0" layoutY="93.0" prefHeight="239.0" prefWidth="231.0" />
+
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Минимальный юзер">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
+                     <children>
+                        <Label fx:id="minimumUser" layoutX="427.0" layoutY="11.0" onMouseClicked="#minUser" prefHeight="37.0" prefWidth="211.0" text="Пользователь длина письма которого найменьшая" textFill="RED" textOverrun="CLIP" wrapText="true" />
+                        <Label fx:id="minimumUser" layoutX="427.0" layoutY="62.0" />
+
+
+
+                         <TextField fx:id="bySubject" layoutX="88.0" layoutY="66.0" prefHeight="25.0" prefWidth="186.0" />
+                         <TextField fx:id="byAuther" layoutX="85.0" layoutY="11.0" prefHeight="25.0" prefWidth="188.0" />
+                         <Label layoutX="14.0" layoutY="70.0" text="По теме" />
+                         <Label layoutX="14.0" layoutY="14.0" text="По автору" />
+                         <Button layoutX="284.0" layoutY="66.0" mnemonicParsing="false" onAction="#fiendBySubject" prefHeight="25.0" prefWidth="79.0" text="Поиск" />
+                         <Button layoutX="284.0" layoutY="11.0" mnemonicParsing="false" onAction="#fiendByAuther" prefHeight="25.0" prefWidth="77.0" text="Поиск" />
+                         <Label fx:id="statusError" layoutX="28.0" layoutY="334.0" prefHeight="43.0" prefWidth="216.0" textAlignment="RIGHT" wrapText="true" />
+                         <TableView fx:id="TableMessage" layoutY="106.0" prefHeight="274.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
+                             <columns>
+                                 <TableColumn fx:id="id" prefWidth="54.0" text="id" />
+                                 <TableColumn fx:id="senderLastName" prefWidth="109.0" text="Фамилия отправитель" />
+                                 <TableColumn fx:id="senderFirstName" prefWidth="109.0" text="Имя отправитель" />
+                                 <TableColumn fx:id="senderSecondName" prefWidth="109.0" text="Отчество отправитель" />
+
+                                 <TableColumn fx:id="recipientLastName" prefWidth="111.0" text="Фамилия получателя" />
+                                 <TableColumn fx:id="recipientFirstName" prefWidth="111.0" text="Имя получателя" />
+                                 <TableColumn fx:id="recipientSecondName" prefWidth="111.0" text="Отчество получателя" />
+
+                                 <TableColumn fx:id="subjectC" prefWidth="53.0" text="Тема" />
+                                 <TableColumn fx:id="text" prefWidth="96.0" text="Сообщение" />
+                                 <TableColumn fx:id="time" prefWidth="102.0" text="Время" />
+                             </columns>
+                         </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+
+            <Tab text="Инфа о пользователях">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="709.0">
+                     <children>
+                        <TableView fx:id="AboutUserAndLetter" layoutX="21.0" layoutY="31.0" prefHeight="349.0" prefWidth="1006.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+                          <columns>
+                            <TableColumn fx:id="UserLetterId" text="ID" />
+                            <TableColumn fx:id="UserLetterLastName" text="Фамилия" />
+                            <TableColumn fx:id="UserLetterFirstName" text="Имя" />
+                            <TableColumn fx:id="UserLetterSecondName" text="Отчество" />
+                            <TableColumn fx:id="UserLetterBirthday" prefWidth="97.0" text="Дата рождения" />
+                            <TableColumn fx:id="UserLetterSend" prefWidth="207.0" text="Количество отправленных писем" />
+                            <TableColumn fx:id="UserLetterRecip" prefWidth="185.0" text="Количество полученых писем" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="То ли есть, то ли нет">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
+
+                    </AnchorPane>
+                </content>
+            </Tab>
+
+            <Tab text="Спам мод">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
+
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label fx:id="uData" layoutX="14.0" layoutY="7.0" text="Label" />
+   </children>
+</AnchorPane>
