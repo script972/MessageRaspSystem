@@ -19,10 +19,24 @@ public class DBManipulate {
     private static final String SENDMESSAGE="INSERT INTO letter.message(sender, recipient, subject, text, dateSend) VALUES (?,?,?,?,NOW())";
     private static final String MESSAGEBYAUR="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
-            "    WHERE sender=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend";
+            "    WHERE sender=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+
+    private static final String MESSAGEBYLASTNAME="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
+            "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
+            "    WHERE senduser.LastName=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+
+    private static final String MESSAGEBYLASTNAMEFIRSTNAME="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
+            "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
+            "    WHERE senduser.LastName=? AND senduser.FirstName=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+
+    private static final String MESSAGEBYFULLNAME="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
+            "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
+            "    WHERE senduser.LastName=? AND senduser.FirstName=? AND senduser.SecondName= ?   AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+
+
     private static final String MESSAGEBYSUBJECT="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
-            "    WHERE subject=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend";
+            "    WHERE subject=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
     private static final String MESSAGEMINIMUM="SELECT user.id, send.LastName, send.FirstName, send.SecondName, recip.LastName, recip.FirstName, recip.SecondName, subject, text, dateSend\n" +
             "FROM message, user, user AS recip, user AS send WHERE text=(SELECT min(text) FROM message) AND send.id = message.sender  AND recip.id = message.recipient LIMIT 1";
 
@@ -131,7 +145,7 @@ public class DBManipulate {
 
 
 
-    public ArrayList<MessageLet> getMessageAuther(String auther) throws SQLException {
+    public ArrayList<MessageLet> getMessageAutherByID(String auther) throws SQLException {
         ArrayList<MessageLet> al=new ArrayList<MessageLet>();
         connect();
         PreparedStatement preparedStatement = conn.prepareStatement(MESSAGEBYAUR);
@@ -228,5 +242,130 @@ public class DBManipulate {
         preparedStatement.close();
         close();
         return null;
+    }
+
+
+    public ArrayList<MessageLet> getMessageAutherByLastName(String LName) throws SQLException {
+        ArrayList<MessageLet> list = new ArrayList<MessageLet>();
+
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(MESSAGEBYLASTNAME);
+        preparedStatement.setString(1, LName);
+        ResultSet rs = preparedStatement.executeQuery();
+        int id;
+        String subject;
+        String text;
+        java.sql.Date dateSend;
+        String FirstNameSend;
+        String LastNameSend;
+        String SecondNameSend;
+        String FirstNameRecip;
+        String LastNameRecip;
+        String SecondNameRecip;
+
+
+        while (rs.next()) {
+            id=rs.getInt("id");
+            subject=rs.getString("subject");
+            text=rs.getString("text");
+            dateSend=rs.getDate("dateSend");
+            FirstNameSend = rs.getString("FirstName");
+            LastNameSend=rs.getString("LastName");
+            SecondNameSend=rs.getString("SecondName");
+
+            FirstNameRecip = rs.getString(10);
+            LastNameRecip=rs.getString(11);
+            SecondNameRecip=rs.getString(12);
+            MessageLet ms=new MessageLet(id, subject, text, dateSend, FirstNameSend, LastNameSend, SecondNameSend, FirstNameRecip, LastNameRecip, SecondNameRecip);
+            list.add(ms);
+        }
+        preparedStatement.close();
+        close();
+
+        return list;
+    }
+
+    public ArrayList<MessageLet> getMessageAutherByLastNameFirstName(String LName, String FName) throws SQLException {
+        ArrayList<MessageLet> list = new ArrayList<MessageLet>();
+
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(MESSAGEBYLASTNAMEFIRSTNAME);
+        preparedStatement.setString(1, LName);
+        preparedStatement.setString(2, FName);
+        ResultSet rs = preparedStatement.executeQuery();
+        int id;
+        String subject;
+        String text;
+        java.sql.Date dateSend;
+        String FirstNameSend;
+        String LastNameSend;
+        String SecondNameSend;
+        String FirstNameRecip;
+        String LastNameRecip;
+        String SecondNameRecip;
+
+
+        while (rs.next()) {
+            id=rs.getInt("id");
+            subject=rs.getString("subject");
+            text=rs.getString("text");
+            dateSend=rs.getDate("dateSend");
+            FirstNameSend = rs.getString("FirstName");
+            LastNameSend=rs.getString("LastName");
+            SecondNameSend=rs.getString("SecondName");
+
+            FirstNameRecip = rs.getString(10);
+            LastNameRecip=rs.getString(11);
+            SecondNameRecip=rs.getString(12);
+            MessageLet ms=new MessageLet(id, subject, text, dateSend, FirstNameSend, LastNameSend, SecondNameSend, FirstNameRecip, LastNameRecip, SecondNameRecip);
+            list.add(ms);
+        }
+        preparedStatement.close();
+        close();
+
+        return list;
+    }
+
+
+    public ArrayList<MessageLet> getMessageAutherByFullName(String LName, String FName, String SName) throws SQLException {
+        ArrayList<MessageLet> list =new ArrayList<MessageLet>();
+
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(MESSAGEBYFULLNAME);
+        preparedStatement.setString(1, LName);
+        preparedStatement.setString(2, FName);
+        preparedStatement.setString(3, SName);
+        ResultSet rs = preparedStatement.executeQuery();
+        int id;
+        String subject;
+        String text;
+        java.sql.Date dateSend;
+        String FirstNameSend;
+        String LastNameSend;
+        String SecondNameSend;
+        String FirstNameRecip;
+        String LastNameRecip;
+        String SecondNameRecip;
+
+
+        while (rs.next()) {
+            id=rs.getInt("id");
+            subject=rs.getString("subject");
+            text=rs.getString("text");
+            dateSend=rs.getDate("dateSend");
+            FirstNameSend = rs.getString("FirstName");
+            LastNameSend=rs.getString("LastName");
+            SecondNameSend=rs.getString("SecondName");
+
+            FirstNameRecip = rs.getString(10);
+            LastNameRecip=rs.getString(11);
+            SecondNameRecip=rs.getString(12);
+            MessageLet ms=new MessageLet(id, subject, text, dateSend, FirstNameSend, LastNameSend, SecondNameSend, FirstNameRecip, LastNameRecip, SecondNameRecip);
+            list.add(ms);
+        }
+        preparedStatement.close();
+        close();
+
+        return list;
     }
 }

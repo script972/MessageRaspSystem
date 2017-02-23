@@ -85,11 +85,41 @@ public class Model  {
 
 
     public ArrayList<MessageLet> fiendMessageByAuther(String auther){
-        try {
-            return  dbManipulate.getMessageAuther(auther);
-        } catch (SQLException e) {
+        try{
+            return  dbManipulate.getMessageAutherByID(auther);
+        }catch (NumberFormatException e)
+        {
+            String [] FIO=auther.split(" ");
+
+
+            switch (FIO.length){
+                case 0: return null;
+                case 1:
+                    try {
+                        return dbManipulate.getMessageAutherByLastName(FIO[0]);
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                case 2:
+                    try {
+                        return dbManipulate.getMessageAutherByLastNameFirstName(FIO[0], FIO[1]);
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                    break;
+                case 3:
+                    try {
+                        return dbManipulate.getMessageAutherByFullName(FIO[0], FIO[1], FIO[2]);
+                    } catch (SQLException e1) {
+                        e1.printStackTrace();
+                    }
+                    break;
+            }
+        }
+        catch (SQLException e){
             e.printStackTrace();
         }
+
         return null;
     }
 

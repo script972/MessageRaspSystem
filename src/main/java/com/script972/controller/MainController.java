@@ -49,6 +49,11 @@ public class MainController implements Initializable {
     Label statusError;
     @FXML
     Label minimumUser;
+    @FXML
+    RadioButton RadioAuther;
+    @FXML
+    RadioButton RadioSubject;
+
 
 
     private ObservableList<MessageLet> messageData = FXCollections.observableArrayList();
@@ -132,56 +137,64 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());
-
-
         }
         catch (Exception e){
         }
     }
 
-    public void fiendByAuther(ActionEvent actionEvent) {
-        TableMessage.getItems().clear();
-        ArrayList<MessageLet> list=model.fiendMessageByAuther(byAuther.getText());
-        messageData.addAll(list);
-        id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
-        senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
-        senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
-        senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
+    public void fiendMessage(ActionEvent actionEvent) {
+        if(RadioAuther.isSelected()) {
+            TableMessage.getItems().clear();
+            ArrayList<MessageLet> list = model.fiendMessageByAuther(byAuther.getText());
+            messageData.addAll(list);
+            id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
+            senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
+            senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
+            senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
 
-        recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
-        recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
-        recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
+            recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
+            recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
+            recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
 
-        subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
-        text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
-        time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
+            subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
+            text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
+            time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
+            TableMessage.setItems(messageData);
+        } else
+            if(RadioSubject.isSelected())
+            {
+                TableMessage.getItems().clear();
+                ArrayList<MessageLet> list=model.fiendMessageBySubject(bySubject.getText());
+                messageData.addAll(list);
+                id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
+                senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
+                senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
+                senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
 
-        TableMessage.setItems(messageData);
+                recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
+                recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
+                recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
+
+                subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
+                text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
+                time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
+
+                TableMessage.setItems(messageData);
+            }
     }
 
-    public void fiendBySubject(ActionEvent actionEvent) {
-        ArrayList<MessageLet> list=model.fiendMessageBySubject(bySubject.getText());
-        messageData.addAll(list);
-        id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
-        senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
-        senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
-        senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
-
-        recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
-        recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
-        recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
-
-        subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
-        text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
-        time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
-
-        TableMessage.setItems(messageData);
-
-    }
 
     public void minUser(MouseEvent mouseEvent) {
         User minLetter=model.minimumSizeLetter();
-        minimumUser.setText(minimumUser.getText()+" = "+minLetter.getLastName()+" "+minLetter.getFirstName()+" "+minLetter.getSecondName()+" ID "+ minLetter.getId());
+        minimumUser.setText(" = "+minLetter.getLastName()+" "+minLetter.getFirstName()+" "+minLetter.getSecondName()+" ID "+ minLetter.getId());
 
+    }
+
+    public void chooseRadioAuther(ActionEvent actionEvent) {
+        RadioSubject.setSelected(false);
+    }
+
+    public void chooseRadioSubject(ActionEvent actionEvent) {
+        RadioAuther.setSelected(false);
     }
 }

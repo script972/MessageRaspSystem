@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -25,6 +26,7 @@
                         <Label layoutX="26.0" layoutY="93.0" text="сообщение" />
                         <TextField fx:id="to" layoutX="119.0" layoutY="52.0" prefHeight="25.0" prefWidth="53.0" />
                         <TextArea fx:id="message" layoutX="119.0" layoutY="93.0" prefHeight="239.0" prefWidth="231.0" />
+                         <Label fx:id="statusError" layoutX="28.0" layoutY="334.0" prefHeight="43.0" prefWidth="216.0" textAlignment="RIGHT" wrapText="true" />
 
 
                      </children>
@@ -33,9 +35,9 @@
           </Tab>
           <Tab text="Минимальный юзер">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
+              <AnchorPane fx:id="RaiodSubject" minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
                      <children>
-                        <Label fx:id="minimumUser" layoutX="427.0" layoutY="11.0" onMouseClicked="#minUser" prefHeight="37.0" prefWidth="211.0" text="Пользователь длина письма которого найменьшая" textFill="RED" textOverrun="CLIP" wrapText="true" />
+                        <Label fx:id="minimumUser" layoutX="483.0" layoutY="11.0" onMouseClicked="#minUser" prefHeight="37.0" prefWidth="211.0" text="Пользователь длина письма которого найменьшая" textFill="RED" textOverrun="CLIP" wrapText="true" />
                         <Label fx:id="minimumUser" layoutX="427.0" layoutY="62.0" />
 
 
@@ -44,9 +46,7 @@
                          <TextField fx:id="byAuther" layoutX="85.0" layoutY="11.0" prefHeight="25.0" prefWidth="188.0" />
                          <Label layoutX="14.0" layoutY="70.0" text="По теме" />
                          <Label layoutX="14.0" layoutY="14.0" text="По автору" />
-                         <Button layoutX="284.0" layoutY="66.0" mnemonicParsing="false" onAction="#fiendBySubject" prefHeight="25.0" prefWidth="79.0" text="Поиск" />
-                         <Button layoutX="284.0" layoutY="11.0" mnemonicParsing="false" onAction="#fiendByAuther" prefHeight="25.0" prefWidth="77.0" text="Поиск" />
-                         <Label fx:id="statusError" layoutX="28.0" layoutY="334.0" prefHeight="43.0" prefWidth="216.0" textAlignment="RIGHT" wrapText="true" />
+                         <Button layoutX="293.0" layoutY="66.0" mnemonicParsing="false" onAction="#fiendMessage" prefHeight="25.0" prefWidth="77.0" text="Поиск" />
                          <TableView fx:id="TableMessage" layoutY="106.0" prefHeight="274.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="106.0">
                              <columns>
                                  <TableColumn fx:id="id" prefWidth="54.0" text="id" />
@@ -63,6 +63,8 @@
                                  <TableColumn fx:id="time" prefWidth="102.0" text="Время" />
                              </columns>
                          </TableView>
+                        <RadioButton fx:id="RadioAuther" layoutX="292.0" layoutY="14.0" mnemonicParsing="false" onAction="#chooseRadioAuther" text="По автору" />
+                        <RadioButton fx:id="RadioSubject" layoutX="293.0" layoutY="39.0" mnemonicParsing="false" onAction="#chooseRadioSubject" text="По теме" />
                      </children></AnchorPane>
             </content>
           </Tab>
@@ -71,7 +73,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="709.0">
                      <children>
-                        <TableView fx:id="AboutUserAndLetter" layoutX="21.0" layoutY="65.0" prefHeight="315.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+                        <TableView fx:id="AboutUserAndLetter" layoutX="21.0" layoutY="65.0" prefHeight="315.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
                           <columns>
                             <TableColumn fx:id="UserLetterId" text="ID" />
                             <TableColumn fx:id="UserLetterLastName" text="Фамилия" />
