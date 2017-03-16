@@ -1,9 +1,7 @@
 package com.script972.Model;
 
-import javafx.collections.ObservableList;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import com.script972.Windows.RegisterWindows;
+import com.script972.Windows.WindowsControl;
 import javafx.stage.Stage;
 
 import java.sql.*;
@@ -140,4 +138,25 @@ public class Model  {
         }
         return null;
     }
+
+    public void openRegistrationWindow() {
+        RegisterWindows gw=new RegisterWindows();
+        try {
+            gw.start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public int registerNewPerson(String lastName, String firstName, String secondName, String password) {
+        try {
+           return dbManipulate.createNewUser(lastName, firstName, secondName, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+
+    }
+
+
 }

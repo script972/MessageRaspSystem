@@ -14,5 +14,6 @@
         <PasswordField fx:id="pass" layoutX="24.0" layoutY="86.0" prefWidth="200.0" />
         <Button layoutX="168.0" layoutY="124.0" mnemonicParsing="false" onAction="#enter" text="Log In" />
       <Label fx:id="errorOut" layoutX="24.0" layoutY="116.0" />
+      <Button layoutX="25.0" layoutY="121.0" mnemonicParsing="false" onAction="#openRegistration" text="Регистрация" />
     </children>
 </AnchorPane>

@@ -42,6 +42,8 @@ public class DBManipulate {
             "recip.FirstName, recip.SecondName, subject, text, dateSend\n" +
             "FROM message, user, user AS recip, user AS send WHERE text=(SELECT min(text) FROM message) AND send.id = message.sender  AND recip.id = message.recipient LIMIT 1";
 
+    private static final String NewUser="INSERT INTO letter.user(password, SecondName, LastName, FirstName) VALUES (?,?,?,?)";
+    private static final String idByName="SELECT id FROM letter.user WHERE LastName=? AND FirstName=? AND SecondName=?";
 
 
 
@@ -369,5 +371,30 @@ public class DBManipulate {
         close();
 
         return list;
+    }
+
+    public int createNewUser(String lastName, String firstName, String secondName, String password) throws SQLException {
+        connect();
+        //  Date date = getCurrentJavaSqlDate();
+        PreparedStatement preparedStatement=conn.prepareStatement(NewUser);
+        preparedStatement.setString(1, password);
+        preparedStatement.setString(2, secondName);
+        preparedStatement.setString(3, lastName);
+        preparedStatement.setString(4, firstName);
+        //preparedStatement.setDate(5, (java.sql.Date) date);
+        preparedStatement.executeUpdate();
+
+        preparedStatement = conn.prepareStatement(idByName);
+        preparedStatement.setString(1, lastName);
+        preparedStatement.setString(2, firstName);
+        preparedStatement.setString(3, secondName);
+        ResultSet rs = preparedStatement.executeQuery();
+        int id=0;
+        while (rs.next()){
+            id=rs.getInt("id");
+        }
+        preparedStatement.close();
+        close();
+        return id;
     }
 }

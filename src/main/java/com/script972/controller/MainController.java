@@ -3,6 +3,7 @@ package com.script972.controller;
 import com.script972.Model.MessageLet;
 import com.script972.Model.Model;
 import com.script972.Model.User;
+import com.script972.Windows.WindowsControl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -84,6 +85,22 @@ public class MainController implements Initializable {
     private TableColumn<MessageLet, String> text;
     @FXML
     private TableColumn<MessageLet, java.sql.Date> time;
+
+
+
+    @FXML
+    private TextField registerFirstName;
+    @FXML
+    private TextField registerLastName;
+    @FXML
+    private TextField registerSecondName;
+    @FXML
+    private DatePicker registerBirthdayDate;
+    @FXML
+    private TextField registerPassword;
+    @FXML
+    private Label unewID;
+
 /*///Таблица на 1 ТАб*/
 
 
@@ -196,5 +213,28 @@ public class MainController implements Initializable {
 
     public void chooseRadioSubject(ActionEvent actionEvent) {
         RadioAuther.setSelected(false);
+    }
+
+
+
+
+
+
+
+
+    /*REGISTRATION*/
+    public void register(ActionEvent actionEvent) {
+        String lastName=registerLastName.getText();
+        String firstName=registerFirstName.getText();
+        String secondName=registerSecondName.getText();
+        String password=registerPassword.getText();
+        unewID.setText("");
+        unewID.setText("Ваш ID= "+String.valueOf(model.registerNewPerson(lastName, firstName, secondName, password)));
+
+
+    }
+
+    public void openRegistration(ActionEvent actionEvent) {
+        model.openRegistrationWindow();
     }
 }
