@@ -34,16 +34,18 @@ public class DBManipulate {
             "    WHERE senduser.LastName=? AND senduser.FirstName=? AND senduser.SecondName= ?   AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
 
 
-    private static final String MESSAGEBYSUBJECT="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
+    private static final String MESSAGEBYSUBJECT="    SELECT message.id, sender, recipient, subject, text, dateSend, " +
+            "senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
             "    WHERE subject=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
-    private static final String MESSAGEMINIMUM="SELECT user.id, send.LastName, send.FirstName, send.SecondName, recip.LastName, recip.FirstName, recip.SecondName, subject, text, dateSend\n" +
+    private static final String MESSAGEMINIMUM="SELECT user.id, send.LastName, send.FirstName, send.SecondName, recip.LastName, " +
+            "recip.FirstName, recip.SecondName, subject, text, dateSend\n" +
             "FROM message, user, user AS recip, user AS send WHERE text=(SELECT min(text) FROM message) AND send.id = message.sender  AND recip.id = message.recipient LIMIT 1";
 
 
 
 
-    private static final String USERNAME="root";
+    private static final String USERNAME="script972";
     private static final String PASSWORD="root";
     private static final String URL="jdbc:mysql://127.0.0.1:3306/letter?useSSL=false";
     private Connection conn;
