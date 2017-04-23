@@ -50,7 +50,12 @@ public class DBManipulate {
             "\n";
 
     private static final String NewUser="INSERT INTO letter.user(password, SecondName, LastName, FirstName) VALUES (?,?,?,?)";
+
     private static final String idByName="SELECT id FROM letter.user WHERE LastName=? AND FirstName=? AND SecondName=?";
+
+    private static final String countSender="SELECT COUNT(DISTINCT message.id) FROM message, user WHERE message.sender=?";
+
+    private static final String countRecipient="SELECT COUNT(DISTINCT message.id) FROM message, user WHERE message.recipient=?";
 
 
 
@@ -78,7 +83,6 @@ public class DBManipulate {
         return new java.sql.Date(today.getTime());
     }
 
-
     private void close() {
         try {
             conn.close();
@@ -86,7 +90,6 @@ public class DBManipulate {
             e.printStackTrace();
         }
     }
-
 
     public User userById(String login) throws SQLException {
         connect();
@@ -153,7 +156,6 @@ public class DBManipulate {
 
         return true;
     }
-
 
     public ArrayList<MessageLet> getMessageAutherByID(String auther) throws SQLException {
         ArrayList<MessageLet> al=new ArrayList<MessageLet>();
@@ -254,7 +256,6 @@ public class DBManipulate {
         return null;
     }
 
-
     public ArrayList<MessageLet> getMessageAutherByLastName(String LName) throws SQLException {
         ArrayList<MessageLet> list = new ArrayList<MessageLet>();
 
@@ -335,7 +336,6 @@ public class DBManipulate {
 
         return list;
     }
-
 
     public ArrayList<MessageLet> getMessageAutherByFullName(String LName, String FName, String SName) throws SQLException {
         ArrayList<MessageLet> list =new ArrayList<MessageLet>();
@@ -440,5 +440,59 @@ public class DBManipulate {
         preparedStatement.close();
         close();
         return id;
+    }
+
+    public ArrayList<User> getUsetWithCounting() throws SQLException {
+        ArrayList<User> al=new ArrayList<User>();
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(SELECTuser);
+        ResultSet rs = preparedStatement.executeQuery();
+        int userid = 0;
+        String firstname = null;
+        String lastname = null;
+        String secondname = null;
+        Date birthday = null;
+        String pass = null;
+        int send=0;
+        int recip=0;
+        while (rs.next()) {
+            userid = rs.getInt("id");
+            firstname = rs.getString("FirstName");
+            lastname=rs.getString("LastName");
+            secondname=rs.getString("SecondName");
+            birthday=rs.getDate("birthday");
+            pass=rs.getString("password");
+            send=countSend(userid);
+            recip=countRecip(userid);
+            al.add(new User(userid, firstname, lastname, secondname, birthday, pass, send, recip));
+           // System.out.println(new User(userid, firstname, lastname, secondname, birthday, pass, send, recip));
+        }
+        close();
+        return al;
+    }
+
+    private int countSend(int id) throws SQLException {
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(countSender);
+        preparedStatement.setInt(1, id);
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+           return rs.getInt(1);
+        }
+        close();
+        return 0;
+
+    }
+
+    private int countRecip(int id) throws SQLException {
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(countRecipient);
+        preparedStatement.setInt(1, id);
+        ResultSet rs = preparedStatement.executeQuery();
+        while (rs.next()) {
+            return rs.getInt(1);
+        }
+        close();
+        return 0;
     }
 }

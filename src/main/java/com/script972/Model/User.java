@@ -13,6 +13,36 @@ public class User {
     private Date birthday;
     private String pass;
 
+    private int countSend;
+    private int countRecip;
+
+    public int getCountSend() {
+        return countSend;
+    }
+
+    public void setCountSend(int countSend) {
+        this.countSend = countSend;
+    }
+
+    public int getCountRecip() {
+        return countRecip;
+    }
+
+    public void setCountRecip(int countRecip) {
+        this.countRecip = countRecip;
+    }
+
+    public User(int id, String firstName, String lastName, String secondName, Date birthday, String pass, int countSend, int countRecip) {
+        this.id = id;
+        FirstName = firstName;
+        LastName = lastName;
+        SecondName = secondName;
+        this.birthday = birthday;
+        this.pass = pass;
+        this.countSend = countSend;
+        this.countRecip = countRecip;
+    }
+
     public User(int id, String firstName, String lastName, String secondName, Date birthday, String pass) {
         this.id = id;
         FirstName = firstName;
@@ -84,12 +114,15 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "FirstName='" + FirstName + '\'' +
+                "id=" + id +
+                ", FirstName='" + FirstName + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", SecondName='" + SecondName + '\'' +
                 ", birthday=" + birthday +
-                ", id=" + id +
                 ", pass='" + pass + '\'' +
+                ", countSend=" + countSend +
+                ", countRecip=" + countRecip +
                 '}';
     }
+
 }

@@ -5,6 +5,7 @@ import com.script972.Windows.WindowsControl;
 import javafx.stage.Stage;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -175,6 +176,15 @@ public class Model  {
     public ArrayList<MessageLet> myMessage(String text) {
         try {
             return dbManipulate.getMessageByRecipientID(text);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public ArrayList<User> getCountSender(){
+        try {
+            return dbManipulate.getUsetWithCounting();
         } catch (SQLException e) {
             e.printStackTrace();
         }

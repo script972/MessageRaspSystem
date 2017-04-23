@@ -22,16 +22,13 @@ import java.util.ResourceBundle;
  * Created by script972 on 19.02.2017.
  */
 public class MainController implements Initializable {
-    Model model=new Model();
+    Model model = new Model();
     @FXML
     private Label errorOut;
     @FXML
     private TextField login;
     @FXML
     private TextField pass;
-
-
-
 
 
     @FXML
@@ -60,12 +57,13 @@ public class MainController implements Initializable {
 
     private ObservableList<MessageLet> messageData = FXCollections.observableArrayList();
     private ObservableList<MessageLet> messageRecive = FXCollections.observableArrayList();
+    private ObservableList<User> userCount = FXCollections.observableArrayList();
 
     /*Таблица на 1 ТАБ*/
     @FXML
-    private TableView <MessageLet> TableMessage;
+    private TableView<MessageLet> TableMessage;
     @FXML
-    private TableColumn <MessageLet, Integer >id;
+    private TableColumn<MessageLet, Integer> id;
     @FXML
     private TableColumn<MessageLet, String> senderLastName;
     @FXML
@@ -84,7 +82,6 @@ public class MainController implements Initializable {
     private TableColumn<MessageLet, String> text;
     @FXML
     private TableColumn<MessageLet, java.sql.Date> time;
-
 
 
     @FXML
@@ -121,6 +118,23 @@ public class MainController implements Initializable {
 
 
     /*Count MEssage*/
+    @FXML
+    private TableView<User> AboutUserAndLetter;
+
+    @FXML
+    private TableColumn<User, Integer> UserLetterId;
+    @FXML
+    private TableColumn<User, String> UserLetterLastName;
+    @FXML
+    private TableColumn<User, String> UserLetterFirstName;
+    @FXML
+    private TableColumn<User, String> UserLetterSecondName;
+    @FXML
+    private TableColumn<User, Date> UserLetterBirthday;
+    @FXML
+    private TableColumn<User, String> UserLetterSend;
+    @FXML
+    private TableColumn<User, String> UserLetterRecip;
 
 
 
@@ -133,10 +147,10 @@ public class MainController implements Initializable {
 /*//// Таблица на 3 Таб */
 
     public void enter(ActionEvent actionEvent) {
-        String login=this.login.getText();
-        String pass=this.pass.getText();
+        String login = this.login.getText();
+        String pass = this.pass.getText();
         try {
-            errorOut.setText(model.isAccess(login,pass));
+            errorOut.setText(model.isAccess(login, pass));
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -146,37 +160,36 @@ public class MainController implements Initializable {
 
         /*uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());*/
 //        int toS=Integer.valueOf(to.getText());
-        if(radioSpam.isSelected()) {
+        if (radioSpam.isSelected()) {
 
-            if ( !message.getText().isEmpty()){
+            if (!message.getText().isEmpty()) {
                 model.sendAir(model.getUser().getId(), subject.getText(), message.getText());
                 statusError.setText("Сообщение всем пользователям отправленно ");
                 cleanMessageForm();
                 return;
-            }
-            else {
+            } else {
                 statusError.setText("Пропуски заполни");
                 return;
             }
-        }else{
+        } else {
             try {
 
-                if(to.getText().isEmpty() || subject.getText().isEmpty()){
+                if (to.getText().isEmpty() || subject.getText().isEmpty()) {
                     errorOut.setText("Заполни пропуски!");
                     return;
                 }
                 int toS = Integer.valueOf(to.getText());
                 if (model.isUser(to.getText())) {
                     model.sendMessage(toS, model.getUser().getId(), subject.getText(), message.getText());
-                    User us=model.userById(to.getText());
-                    statusError.setText("Сообщение для "+us.getLastName()+" "+us.getFirstName()+" "+us.getSecondName()+" отправленно ");
+                    User us = model.userById(to.getText());
+                    statusError.setText("Сообщение для " + us.getLastName() + " " + us.getFirstName() + " " + us.getSecondName() + " отправленно ");
                     cleanMessageForm();
                     return;
                 } else {
                     statusError.setText("Данный получатель отсутствует");
                     return;
                 }
-            } catch (Exception e){
+            } catch (Exception e) {
                 statusError.setText("Типы данних получателя не верний");
             }
 
@@ -191,11 +204,9 @@ public class MainController implements Initializable {
         return true;
     }
 
-
     public void initialize(URL location, ResourceBundle resources) {
         try {
-            uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());
-
+            uData.setText("Ти есть " + String.valueOf(model.getUser().getFirstName()) + " твой ID " + model.getUser().getId());
 
             TableMessage.getItems().clear();
             ArrayList<MessageLet> list = model.myMessage(String.valueOf(model.getUser().getId()));
@@ -212,13 +223,26 @@ public class MainController implements Initializable {
 
 
 
-        }
-        catch (Exception e){
+            /*COUNTING*/
+            userCount.addAll(model.getCountSender());
+
+            UserLetterId.setCellValueFactory(new PropertyValueFactory<User, Integer>("id"));
+            UserLetterLastName.setCellValueFactory(new PropertyValueFactory<User, String>("LastName"));
+            UserLetterFirstName.setCellValueFactory(new PropertyValueFactory<User, String>("FirstName"));
+            UserLetterSecondName.setCellValueFactory(new PropertyValueFactory<User, String>("SecondName"));
+            UserLetterBirthday.setCellValueFactory(new PropertyValueFactory<User, Date>("birthday"));
+            UserLetterSend.setCellValueFactory(new PropertyValueFactory<User, String>("countSend"));
+            UserLetterRecip.setCellValueFactory(new PropertyValueFactory<User, String>("countRecip"));
+
+            AboutUserAndLetter.setItems(userCount);
+
+
+        } catch (Exception e) {
         }
     }
 
     public void fiendMessage(ActionEvent actionEvent) {
-        if(RadioAuther.isSelected()) {
+        if (RadioAuther.isSelected()) {
             TableMessage.getItems().clear();
             ArrayList<MessageLet> list = model.fiendMessageByAuther(byAuther.getText());
             messageData.addAll(list);
@@ -235,35 +259,32 @@ public class MainController implements Initializable {
             text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
             time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
             TableMessage.setItems(messageData);
-        } else
-            if(RadioSubject.isSelected())
-            {
-                TableMessage.getItems().clear();
-                ArrayList<MessageLet> list=model.fiendMessageBySubject(bySubject.getText());
-                messageData.addAll(list);
-                id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
-                senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
-                senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
-                senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
+        } else if (RadioSubject.isSelected()) {
+            TableMessage.getItems().clear();
+            ArrayList<MessageLet> list = model.fiendMessageBySubject(bySubject.getText());
+            messageData.addAll(list);
+            id.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
+            senderLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
+            senderFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
+            senderSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
 
-                recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
-                recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
-                recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
+            recipientLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameRecip"));
+            recipientFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameRecip"));
+            recipientSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameRecip"));
 
-                subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
-                text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
-                time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
+            subjectC.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
+            text.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
+            time.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
 
-                TableMessage.setItems(messageData);
-            }
+            TableMessage.setItems(messageData);
+        }
     }
 
     public void minUser(MouseEvent mouseEvent) {
-        User minLetter=model.minimumSizeLetter();
-        minimumUser.setText(minimumUser.getText()+ "\n = "+minLetter.getLastName()+" "+minLetter.getFirstName()
-                +" "+minLetter.getSecondName()+" ID "+ minLetter.getId());
-
+        User minLetter = model.minimumSizeLetter();
+        minimumUser.setText(minimumUser.getText() + "= " + minLetter.getLastName() + " " + minLetter.getFirstName() + " " + minLetter.getSecondName() + " ID " + minLetter.getId());
     }
+
 
     public void chooseRadioAuther(ActionEvent actionEvent) {
         RadioSubject.setSelected(false);
@@ -276,12 +297,12 @@ public class MainController implements Initializable {
 
     /*REGISTRATION*/
     public void register(ActionEvent actionEvent) {
-        String lastName=registerLastName.getText();
-        String firstName=registerFirstName.getText();
-        String secondName=registerSecondName.getText();
-        String password=registerPassword.getText();
+        String lastName = registerLastName.getText();
+        String firstName = registerFirstName.getText();
+        String secondName = registerSecondName.getText();
+        String password = registerPassword.getText();
         unewID.setText("");
-        unewID.setText("Ваш ID= "+String.valueOf(model.registerNewPerson(lastName, firstName, secondName, password)));
+        unewID.setText("Ваш ID= " + String.valueOf(model.registerNewPerson(lastName, firstName, secondName, password)));
 
 
     }

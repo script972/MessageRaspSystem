@@ -85,7 +85,7 @@
                 <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="709.0">
                      <children>
-                        <TableView fx:id="AboutUserAndLetter" layoutX="21.0" layoutY="65.0" prefHeight="315.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
+                        <TableView fx:id="AboutUserAndLetter" layoutX="21.0" layoutY="28.0" prefHeight="352.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
                           <columns>
                             <TableColumn fx:id="UserLetterId" text="ID" />
                             <TableColumn fx:id="UserLetterLastName" text="Фамилия" />
