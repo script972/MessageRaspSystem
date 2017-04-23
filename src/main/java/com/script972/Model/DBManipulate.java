@@ -38,9 +38,10 @@ public class DBManipulate {
             "senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
             "    WHERE subject=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
-    private static final String MESSAGEMINIMUM="SELECT user.id, send.LastName, send.FirstName, send.SecondName, recip.LastName, " +
-            "recip.FirstName, recip.SecondName, subject, text, dateSend\n" +
-            "FROM message, user, user AS recip, user AS send WHERE text=(SELECT min(text) FROM message) AND send.id = message.sender  AND recip.id = message.recipient LIMIT 1";
+    private static final String MESSAGEMINIMUM="SELECT user.id, send.LastName, send.FirstName, send.SecondName, recip.LastName,\n" +
+            "  recip.FirstName, recip.SecondName, subject, text, dateSend FROM\n" +
+            "  message, user, user AS recip, user AS send WHERE LENGTH(message.text)=(SELECT MIN(LENGTH(text)) FROM message) LIMIT 1;\n" +
+            "\n";
 
     private static final String NewUser="INSERT INTO letter.user(password, SecondName, LastName, FirstName) VALUES (?,?,?,?)";
     private static final String idByName="SELECT id FROM letter.user WHERE LastName=? AND FirstName=? AND SecondName=?";
@@ -146,7 +147,6 @@ public class DBManipulate {
 
         return true;
     }
-
 
 
     public ArrayList<MessageLet> getMessageAutherByID(String auther) throws SQLException {

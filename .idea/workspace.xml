@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dc7f400-2423-4d60-ba0d-32ed6e0417b6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/DBManipulate.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Model/DBManipulate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/DBProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Model/DBProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/MessageLet.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Model/MessageLet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/Model.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Model/Model.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Windows/MainApp.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Windows/MainApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Windows/RegisterWindows.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Windows/RegisterWindows.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/Windows/WindowsControl.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/Windows/WindowsControl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/script972/controller/MainController.class" afterPath="$PROJECT_DIR$/target/classes/com/script972/controller/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/DBManipulate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/script972/Model/Model.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/script972/controller/MainController.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RaspSystem.iml" afterPath="$PROJECT_DIR$/RaspSystem.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java" afterPath="$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java" afterPath="$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/other.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/other.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/fxml/start.fxml" afterPath="$PROJECT_DIR$/src/main/resources/fxml/start.fxml" />
     </list>
     <ignored path="RaspSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,16 +87,38 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3162">
-              <caret line="203" column="48" lean-forward="false" selection-start-line="203" selection-start-column="48" selection-end-line="203" selection-end-column="48" />
+            <state relative-caret-position="219">
+              <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#7333#7334#0" expanded="false" />
-                <element signature="e#7380#7381#0" expanded="false" />
-                <element signature="e#7443#7444#0" expanded="false" />
-                <element signature="e#7489#7490#0" expanded="false" />
-                <element signature="e#8000#8001#0" expanded="false" />
-                <element signature="e#8046#8047#0" expanded="false" />
+                <element signature="method#enter#0;class#MainController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/start.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="82" lean-forward="true" selection-start-line="16" selection-start-column="82" selection-end-line="16" selection-end-column="82" />
+              <folding>
+                <marker date="1492956085253" expanded="true" signature="1058:1151" ph="..." />
+              </folding>
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Model.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+              <folding>
+                <element signature="method#isUser#0;class#Model#0" expanded="false" />
+                <element signature="method#fiendMessageBySubject#0;class#Model#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -113,48 +129,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
               <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-              <folding>
-                <element signature="e#1679#1680#0" expanded="false" />
-                <element signature="e#1704#1705#0" expanded="false" />
-                <element signature="e#1737#1738#0" expanded="false" />
-                <element signature="e#1765#1766#0" expanded="false" />
-                <element signature="e#1799#1800#0" expanded="false" />
-                <element signature="e#1829#1830#0" expanded="false" />
-                <element signature="e#1875#1876#0" expanded="false" />
-                <element signature="e#1913#1914#0" expanded="false" />
-                <element signature="e#1944#1945#0" expanded="false" />
-                <element signature="e#1971#1972#0" expanded="false" />
-                <element signature="e#2011#2012#0" expanded="false" />
-                <element signature="e#2043#2044#0" expanded="false" />
-                <element signature="e#2076#2077#0" expanded="false" />
-                <element signature="e#2107#2108#0" expanded="false" />
-                <element signature="e#2153#2154#0" expanded="false" />
-                <element signature="e#2193#2194#0" expanded="false" />
-                <element signature="e#2233#2234#0" expanded="false" />
-                <element signature="e#2269#2270#0" expanded="false" />
-                <element signature="e#2327#2328#0" expanded="false" />
-                <element signature="e#2372#2373#0" expanded="false" />
-                <element signature="e#2411#2412#0" expanded="false" />
-                <element signature="e#2446#2447#0" expanded="false" />
-                <element signature="e#2502#2503#0" expanded="false" />
-                <element signature="e#2545#2546#0" expanded="false" />
-                <element signature="e#2586#2587#0" expanded="false" />
-                <element signature="e#2623#2624#0" expanded="false" />
-                <element signature="e#2683#2684#0" expanded="false" />
-                <element signature="e#2730#2731#0" expanded="false" />
-                <element signature="e#2771#2772#0" expanded="false" />
-                <element signature="e#2808#2809#0" expanded="false" />
-                <element signature="e#2868#2869#0" expanded="false" />
-                <element signature="e#2915#2916#0" expanded="false" />
-                <element signature="e#2955#2956#0" expanded="false" />
-                <element signature="e#2991#2992#0" expanded="false" />
-                <element signature="e#3049#3050#0" expanded="false" />
-                <element signature="e#3094#3095#0" expanded="false" />
-                <element signature="e#3136#3137#0" expanded="false" />
-                <element signature="e#3174#3175#0" expanded="false" />
-                <element signature="e#3236#3237#0" expanded="false" />
-                <element signature="e#3285#3286#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,64 +137,40 @@
       <file leaf-file-name="DBManipulate.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2635">
-              <caret line="375" column="22" lean-forward="false" selection-start-line="375" selection-start-column="22" selection-end-line="375" selection-end-column="22" />
+            <state relative-caret-position="323">
+              <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="method#connect#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getCurrentJavaSqlDate#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#close#0;class#DBManipulate#0" expanded="false" />
-                <element signature="method#allUser#0;class#DBManipulate#0" expanded="false" />
+                <element signature="method#sendMessage#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getMessageAutherByID#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getMessageSubject#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getMinimumLetter#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getMessageAutherByLastName#0;class#DBManipulate#0" expanded="false" />
                 <element signature="method#getMessageAutherByLastNameFirstName#0;class#DBManipulate#0" expanded="false" />
-                <marker date="1489702636067" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
-                <marker date="1489702636067" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
-                <marker date="1489702636067" expanded="true" signature="514:526" ph="INSERT INTO message... " />
-                <marker date="1489702636067" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
-                <marker date="1489702636067" expanded="true" signature="660:1015" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="660:1033" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="660:1038" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
-                <marker date="1489702636067" expanded="true" signature="2975:3310" ph="SELECT user.... message" />
-                <marker date="1489702636067" expanded="true" signature="3209:3238" ph="SELECT min(t... message" />
-                <marker date="1489702636067" expanded="true" signature="3355:3438" ph="INSERT INTO letter.user... " />
-                <marker date="1489702636067" expanded="true" signature="3483:3559" ph="SELECT id FR... user" />
+                <element signature="method#getMessageAutherByFullName#0;class#DBManipulate#0" expanded="false" />
+                <element signature="method#createNewUser#0;class#DBManipulate#0" expanded="false" />
+                <marker date="1492951782367" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
+                <marker date="1492951782367" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
+                <marker date="1492951782367" expanded="true" signature="514:526" ph="INSERT INTO message... " />
+                <marker date="1492951782367" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
+                <marker date="1492951782367" expanded="true" signature="660:1015" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="660:1033" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="660:1038" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
+                <marker date="1492951782367" expanded="true" signature="2975:3276" ph="SELECT user.... message" />
+                <marker date="1492951782367" expanded="true" signature="3230:3267" ph="SELECT MIN(L... message" />
+                <marker date="1492951782367" expanded="true" signature="3343:3426" ph="INSERT INTO letter.user... " />
+                <marker date="1492951782367" expanded="true" signature="3471:3547" ph="SELECT id FR... user" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="letter.user" pinned="false" current-in-tab="true">
-        <entry file="dbDummy://dbtable:/c1d0aee/59e524e0-dda3-4772-bfce-d3ae9844de0d/letter.user">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -229,9 +180,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -239,6 +188,21 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/59e524e0-dda3-4772-bfce-d3ae9844de0d/console.sql">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="letter.user" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/c1d0aee/59e524e0-dda3-4772-bfce-d3ae9844de0d/letter.user">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
@@ -261,28 +225,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/register.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="26" lean-forward="false" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="other.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/other.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
-              <folding />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+              <folding>
+                <marker date="1492955177507" expanded="true" signature="2357:5271" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="2379:5254" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="2495:5231" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="2527:5218" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="3663:4861" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="3702:4823" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5318:6608" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5344:6589" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5445:6562" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5477:6549" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5722:6516" ph="..." />
+                <marker date="1492955177507" expanded="true" signature="5758:6479" ph="..." />
+              </folding>
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
         </entry>
@@ -301,6 +265,8 @@
     <findStrings>
       <find>Table</find>
       <find>LastNameSend</find>
+      <find>sendMessage</find>
+      <find>Пропуски заполни</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -325,18 +291,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/SaveStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/MessageLet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/other.fxml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/59e524e0-dda3-4772-bfce-d3ae9844de0d/console_2.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/RegisterWindows.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Windows/WindowsControl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Windows/RegisterWindows.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Windows/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/start.fxml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/59e524e0-dda3-4772-bfce-d3ae9844de0d/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/register.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/fxml/register.fxml" />
+        <option value="dbtable:/c1d0aee/59e524e0-dda3-4772-bfce-d3ae9844de0d/letter.message" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/59e524e0-dda3-4772-bfce-d3ae9844de0d/console.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/other.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/fxml/start.fxml" />
       </list>
     </option>
   </component>
@@ -347,13 +314,38 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenProjectNavigator">
-    <treeState />
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="rasp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="rasp" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1089,12 +1081,20 @@
       <workItem from="1490340049164" duration="2854000" />
       <workItem from="1490777337828" duration="753000" />
       <workItem from="1491476607722" duration="1463000" />
-      <workItem from="1492944000111" duration="652000" />
+      <workItem from="1492944000111" duration="9873000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1492944698079</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1492944698079</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96392000" />
+    <option name="totallyTimeSpent" value="105613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1106,7 +1106,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1118,16 +1118,17 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40356082" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23076923" sideWeight="0.49092284" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.400982" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15739386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15153733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16263238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15128593" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1138,7 +1139,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40261865" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1185,6 +1185,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -1196,7 +1200,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java</url>
-          <line>133</line>
+          <line>134</line>
           <properties class="com.script972.Model.DBManipulate" method="sendMessage" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
@@ -1247,7 +1251,20 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="1360">
           <caret line="80" column="45" lean-forward="false" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
-          <folding />
+          <folding>
+            <marker date="1492955177507" expanded="true" signature="2357:5271" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2379:5254" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2495:5231" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2527:5218" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3663:4861" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3702:4823" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5318:6608" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5344:6589" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5445:6562" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5477:6549" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5722:6516" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5758:6479" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
@@ -1259,13 +1276,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7333#7334#0" expanded="false" />
-            <element signature="e#7380#7381#0" expanded="false" />
-            <element signature="e#7443#7444#0" expanded="false" />
-            <element signature="e#7489#7490#0" expanded="false" />
-            <element signature="e#8000#8001#0" expanded="false" />
-            <element signature="e#8046#8047#0" expanded="false" />
+            <element signature="method#enter#0;class#MainController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1275,13 +1286,7 @@
         <state relative-caret-position="663">
           <caret line="106" column="51" lean-forward="false" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
             <element signature="method#isUser#0;class#Model#0" expanded="false" />
-            <element signature="method#userById#0;class#Model#0" expanded="false" />
-            <element signature="method#sendMessage#0;class#Model#0" expanded="false" />
-            <element signature="method#getAllUser#0;class#Model#0" expanded="false" />
             <element signature="method#fiendMessageBySubject#0;class#Model#0" expanded="false" />
           </folding>
         </state>
@@ -1292,35 +1297,36 @@
         <state relative-caret-position="1224">
           <caret line="225" column="23" lean-forward="false" selection-start-line="225" selection-start-column="23" selection-end-line="225" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#connect#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getCurrentJavaSqlDate#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#close#0;class#DBManipulate#0" expanded="false" />
-            <element signature="method#allUser#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByID#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageSubject#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMinimumLetter#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastName#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastNameFirstName#0;class#DBManipulate#0" expanded="false" />
-            <marker date="1489702636067" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="514:526" ph="INSERT INTO message... " />
-            <marker date="1489702636067" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
-            <marker date="1489702636067" expanded="true" signature="660:1015" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1033" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1038" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2975:3310" ph="SELECT user.... message" />
-            <marker date="1489702636067" expanded="true" signature="3209:3238" ph="SELECT min(t... message" />
-            <marker date="1489702636067" expanded="true" signature="3355:3438" ph="INSERT INTO letter.user... " />
-            <marker date="1489702636067" expanded="true" signature="3483:3559" ph="SELECT id FR... user" />
+            <element signature="method#getMessageAutherByFullName#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#createNewUser#0;class#DBManipulate#0" expanded="false" />
+            <marker date="1492951782367" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="514:526" ph="INSERT INTO message... " />
+            <marker date="1492951782367" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
+            <marker date="1492951782367" expanded="true" signature="660:1015" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1033" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1038" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2975:3276" ph="SELECT user.... message" />
+            <marker date="1492951782367" expanded="true" signature="3230:3267" ph="SELECT MIN(L... message" />
+            <marker date="1492951782367" expanded="true" signature="3343:3426" ph="INSERT INTO letter.user... " />
+            <marker date="1492951782367" expanded="true" signature="3471:3547" ph="SELECT id FR... user" />
           </folding>
         </state>
       </provider>
@@ -1344,13 +1350,7 @@
         <state relative-caret-position="442">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7333#7334#0" expanded="false" />
-            <element signature="e#7380#7381#0" expanded="false" />
-            <element signature="e#7443#7444#0" expanded="false" />
-            <element signature="e#7489#7490#0" expanded="false" />
-            <element signature="e#8000#8001#0" expanded="false" />
-            <element signature="e#8046#8047#0" expanded="false" />
+            <element signature="method#enter#0;class#MainController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1360,13 +1360,7 @@
         <state relative-caret-position="51">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
             <element signature="method#isUser#0;class#Model#0" expanded="false" />
-            <element signature="method#userById#0;class#Model#0" expanded="false" />
-            <element signature="method#sendMessage#0;class#Model#0" expanded="false" />
-            <element signature="method#getAllUser#0;class#Model#0" expanded="false" />
             <element signature="method#fiendMessageBySubject#0;class#Model#0" expanded="false" />
           </folding>
         </state>
@@ -1384,35 +1378,36 @@
         <state relative-caret-position="425">
           <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#connect#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getCurrentJavaSqlDate#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#close#0;class#DBManipulate#0" expanded="false" />
-            <element signature="method#allUser#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByID#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageSubject#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMinimumLetter#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastName#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastNameFirstName#0;class#DBManipulate#0" expanded="false" />
-            <marker date="1489702636067" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="514:526" ph="INSERT INTO message... " />
-            <marker date="1489702636067" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
-            <marker date="1489702636067" expanded="true" signature="660:1015" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1033" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1038" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2975:3310" ph="SELECT user.... message" />
-            <marker date="1489702636067" expanded="true" signature="3209:3238" ph="SELECT min(t... message" />
-            <marker date="1489702636067" expanded="true" signature="3355:3438" ph="INSERT INTO letter.user... " />
-            <marker date="1489702636067" expanded="true" signature="3483:3559" ph="SELECT id FR... user" />
+            <element signature="method#getMessageAutherByFullName#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#createNewUser#0;class#DBManipulate#0" expanded="false" />
+            <marker date="1492951782367" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="514:526" ph="INSERT INTO message... " />
+            <marker date="1492951782367" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
+            <marker date="1492951782367" expanded="true" signature="660:1015" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1033" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1038" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2975:3276" ph="SELECT user.... message" />
+            <marker date="1492951782367" expanded="true" signature="3230:3267" ph="SELECT MIN(L... message" />
+            <marker date="1492951782367" expanded="true" signature="3343:3426" ph="INSERT INTO letter.user... " />
+            <marker date="1492951782367" expanded="true" signature="3471:3547" ph="SELECT id FR... user" />
           </folding>
         </state>
       </provider>
@@ -1421,7 +1416,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1492955177507" expanded="true" signature="2357:5271" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2379:5254" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2495:5231" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2527:5218" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3663:4861" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3702:4823" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5318:6608" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5344:6589" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5445:6562" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5477:6549" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5722:6516" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5758:6479" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1447,13 +1455,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7333#7334#0" expanded="false" />
-            <element signature="e#7380#7381#0" expanded="false" />
-            <element signature="e#7443#7444#0" expanded="false" />
-            <element signature="e#7489#7490#0" expanded="false" />
-            <element signature="e#8000#8001#0" expanded="false" />
-            <element signature="e#8046#8047#0" expanded="false" />
+            <element signature="method#enter#0;class#MainController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1501,13 +1503,7 @@
         <state relative-caret-position="85">
           <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7333#7334#0" expanded="false" />
-            <element signature="e#7380#7381#0" expanded="false" />
-            <element signature="e#7443#7444#0" expanded="false" />
-            <element signature="e#7489#7490#0" expanded="false" />
-            <element signature="e#8000#8001#0" expanded="false" />
-            <element signature="e#8046#8047#0" expanded="false" />
+            <element signature="method#enter#0;class#MainController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1624,44 +1620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/start.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="88" lean-forward="false" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="150" column="16" lean-forward="false" selection-start-line="150" selection-start-column="16" selection-end-line="150" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#376#377#0" expanded="false" />
-            <element signature="e#403#404#0" expanded="false" />
-            <element signature="method#isUser#0;class#Model#0" expanded="false" />
-            <element signature="method#userById#0;class#Model#0" expanded="false" />
-            <element signature="method#sendMessage#0;class#Model#0" expanded="false" />
-            <element signature="method#getAllUser#0;class#Model#0" expanded="false" />
-            <element signature="method#fiendMessageBySubject#0;class#Model#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/DBProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/register.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -1673,132 +1631,121 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/other.fxml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="75" lean-forward="false" selection-start-line="60" selection-start-column="75" selection-end-line="60" selection-end-column="75" />
+        <state relative-caret-position="323">
+          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/MessageLet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/DBProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-          <folding>
-            <element signature="e#1679#1680#0" expanded="false" />
-            <element signature="e#1704#1705#0" expanded="false" />
-            <element signature="e#1737#1738#0" expanded="false" />
-            <element signature="e#1765#1766#0" expanded="false" />
-            <element signature="e#1799#1800#0" expanded="false" />
-            <element signature="e#1829#1830#0" expanded="false" />
-            <element signature="e#1875#1876#0" expanded="false" />
-            <element signature="e#1913#1914#0" expanded="false" />
-            <element signature="e#1944#1945#0" expanded="false" />
-            <element signature="e#1971#1972#0" expanded="false" />
-            <element signature="e#2011#2012#0" expanded="false" />
-            <element signature="e#2043#2044#0" expanded="false" />
-            <element signature="e#2076#2077#0" expanded="false" />
-            <element signature="e#2107#2108#0" expanded="false" />
-            <element signature="e#2153#2154#0" expanded="false" />
-            <element signature="e#2193#2194#0" expanded="false" />
-            <element signature="e#2233#2234#0" expanded="false" />
-            <element signature="e#2269#2270#0" expanded="false" />
-            <element signature="e#2327#2328#0" expanded="false" />
-            <element signature="e#2372#2373#0" expanded="false" />
-            <element signature="e#2411#2412#0" expanded="false" />
-            <element signature="e#2446#2447#0" expanded="false" />
-            <element signature="e#2502#2503#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2586#2587#0" expanded="false" />
-            <element signature="e#2623#2624#0" expanded="false" />
-            <element signature="e#2683#2684#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="false" />
-            <element signature="e#2771#2772#0" expanded="false" />
-            <element signature="e#2808#2809#0" expanded="false" />
-            <element signature="e#2868#2869#0" expanded="false" />
-            <element signature="e#2915#2916#0" expanded="false" />
-            <element signature="e#2955#2956#0" expanded="false" />
-            <element signature="e#2991#2992#0" expanded="false" />
-            <element signature="e#3049#3050#0" expanded="false" />
-            <element signature="e#3094#3095#0" expanded="false" />
-            <element signature="e#3136#3137#0" expanded="false" />
-            <element signature="e#3174#3175#0" expanded="false" />
-            <element signature="e#3236#3237#0" expanded="false" />
-            <element signature="e#3285#3286#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/59e524e0-dda3-4772-bfce-d3ae9844de0d/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/MessageLet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/DBManipulate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2635">
-          <caret line="375" column="22" lean-forward="false" selection-start-line="375" selection-start-column="22" selection-end-line="375" selection-end-column="22" />
+        <state relative-caret-position="323">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="method#connect#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getCurrentJavaSqlDate#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#close#0;class#DBManipulate#0" expanded="false" />
-            <element signature="method#allUser#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#sendMessage#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByID#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageSubject#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMinimumLetter#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastName#0;class#DBManipulate#0" expanded="false" />
             <element signature="method#getMessageAutherByLastNameFirstName#0;class#DBManipulate#0" expanded="false" />
-            <marker date="1489702636067" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
-            <marker date="1489702636067" expanded="true" signature="514:526" ph="INSERT INTO message... " />
-            <marker date="1489702636067" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
-            <marker date="1489702636067" expanded="true" signature="660:1015" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1033" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="660:1038" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
-            <marker date="1489702636067" expanded="true" signature="2975:3310" ph="SELECT user.... message" />
-            <marker date="1489702636067" expanded="true" signature="3209:3238" ph="SELECT min(t... message" />
-            <marker date="1489702636067" expanded="true" signature="3355:3438" ph="INSERT INTO letter.user... " />
-            <marker date="1489702636067" expanded="true" signature="3483:3559" ph="SELECT id FR... user" />
+            <element signature="method#getMessageAutherByFullName#0;class#DBManipulate#0" expanded="false" />
+            <element signature="method#createNewUser#0;class#DBManipulate#0" expanded="false" />
+            <marker date="1492951782367" expanded="true" signature="358:394" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="441:466" ph="SELECT * FRO... user" />
+            <marker date="1492951782367" expanded="true" signature="514:526" ph="INSERT INTO message... " />
+            <marker date="1492951782367" expanded="true" signature="514:607" ph="INSERT INTO letter.message... " />
+            <marker date="1492951782367" expanded="true" signature="660:1015" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1033" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="660:1038" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1481" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1097:1486" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1963" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="1554:1968" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2464" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2027:2469" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2919" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2528:2924" ph="SELECT messa... message" />
+            <marker date="1492951782367" expanded="true" signature="2975:3276" ph="SELECT user.... message" />
+            <marker date="1492951782367" expanded="true" signature="3230:3267" ph="SELECT MIN(L... message" />
+            <marker date="1492951782367" expanded="true" signature="3343:3426" ph="INSERT INTO letter.user... " />
+            <marker date="1492951782367" expanded="true" signature="3471:3547" ph="SELECT id FR... user" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/other.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="61" column="75" lean-forward="false" selection-start-line="61" selection-start-column="75" selection-end-line="61" selection-end-column="75" />
+          <folding>
+            <marker date="1492955177507" expanded="true" signature="2357:5271" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2379:5254" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2495:5231" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="2527:5218" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3663:4861" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="3702:4823" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5318:6608" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5344:6589" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5445:6562" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5477:6549" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5722:6516" ph="..." />
+            <marker date="1492955177507" expanded="true" signature="5758:6479" ph="..." />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c1d0aee/59e524e0-dda3-4772-bfce-d3ae9844de0d/letter.user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/Model/Model.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3162">
-          <caret line="203" column="48" lean-forward="false" selection-start-line="203" selection-start-column="48" selection-end-line="203" selection-end-column="48" />
+        <state relative-caret-position="129">
+          <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7333#7334#0" expanded="false" />
-            <element signature="e#7380#7381#0" expanded="false" />
-            <element signature="e#7443#7444#0" expanded="false" />
-            <element signature="e#7489#7490#0" expanded="false" />
-            <element signature="e#8000#8001#0" expanded="false" />
-            <element signature="e#8046#8047#0" expanded="false" />
+            <element signature="method#isUser#0;class#Model#0" expanded="false" />
+            <element signature="method#fiendMessageBySubject#0;class#Model#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1816,17 +1763,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/c1d0aee/59e524e0-dda3-4772-bfce-d3ae9844de0d/letter.user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/script972/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="259" column="0" lean-forward="false" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding>
+            <element signature="method#enter#0;class#MainController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/fxml/start.fxml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="16" column="82" lean-forward="true" selection-start-line="16" selection-start-column="82" selection-end-line="16" selection-end-column="82" />
+          <folding>
+            <marker date="1492956085253" expanded="true" signature="1058:1151" ph="..." />
+          </folding>
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

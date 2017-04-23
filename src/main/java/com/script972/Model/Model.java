@@ -159,4 +159,16 @@ public class Model  {
     }
 
 
+    public boolean sendAir(int from, String subject, String text) {
+        try {
+            ArrayList<User> users=getAllUser();
+            for (int i = 0; i < users.size(); i++) {
+                dbManipulate.sendMessage(users.get(i).getId(),from, subject,text);
+            }
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

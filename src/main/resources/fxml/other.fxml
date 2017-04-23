@@ -11,7 +11,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.script972.controller.MainController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.script972.controller.MainController">
    <children>
       <TabPane layoutY="31.0" prefHeight="409.0" prefWidth="609.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="31.0">
         <tabs>
@@ -27,6 +27,7 @@
                         <TextField fx:id="to" layoutX="119.0" layoutY="52.0" prefHeight="25.0" prefWidth="53.0" />
                         <TextArea fx:id="message" layoutX="119.0" layoutY="93.0" prefHeight="239.0" prefWidth="231.0" />
                          <Label fx:id="statusError" layoutX="28.0" layoutY="334.0" prefHeight="43.0" prefWidth="216.0" textAlignment="RIGHT" wrapText="true" />
+                        <RadioButton fx:id="radioSpam" layoutX="183.0" layoutY="56.0" mnemonicParsing="false" text="RadioButton" />
 
 
                      </children>
@@ -85,21 +86,6 @@
                           </columns>
                         </TableView>
                      </children></AnchorPane>
-                </content>
-            </Tab>
-            <Tab text="То ли есть, то ли нет">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
-
-                    </AnchorPane>
-                </content>
-            </Tab>
-
-            <Tab text="Спам мод">
-                <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
-
-                    </AnchorPane>
                 </content>
             </Tab>
         </tabs>

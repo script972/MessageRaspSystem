@@ -34,6 +34,7 @@ public class MainController implements Initializable {
 
 
 
+
     @FXML
     TextField byAuther;
     @FXML
@@ -45,6 +46,9 @@ public class MainController implements Initializable {
     @FXML
     TextArea message;
     @FXML
+    RadioButton radioSpam;
+
+    @FXML
     Label uData;
     @FXML
     Label statusError;
@@ -54,6 +58,7 @@ public class MainController implements Initializable {
     RadioButton RadioAuther;
     @FXML
     RadioButton RadioSubject;
+
 
 
 
@@ -119,28 +124,45 @@ public class MainController implements Initializable {
     }
 
     public void sendMessage(ActionEvent actionEvent) {
+
         /*uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());*/
-        if(to.getText().isEmpty() || message.getText().isEmpty()) {
-            statusError.setText("Пропуски заполни");
-            return;
-        }else
-        {
-            try{
-                int toS=Integer.valueOf(to.getText());
-                if(model.isUser(to.getText()))
-                model.sendMessage(toS, model.getUser().getId(), subject.getText(), message.getText());
-                else {
+//        int toS=Integer.valueOf(to.getText());
+        if(radioSpam.isSelected()) {
+
+            if ( !message.getText().isEmpty()){
+                model.sendAir(model.getUser().getId(), subject.getText(), message.getText());
+                statusError.setText("Сообщение всем пользователям отправленно ");
+                cleanMessageForm();
+                return;
+            }
+            else {
+                statusError.setText("Пропуски заполни");
+                return;
+            }
+        }else{
+            try {
+
+                if(to.getText().isEmpty() || subject.getText().isEmpty()){
+                    errorOut.setText("Заполни пропуски!");
+                    return;
+                }
+                int toS = Integer.valueOf(to.getText());
+                if (model.isUser(to.getText())) {
+                    model.sendMessage(toS, model.getUser().getId(), subject.getText(), message.getText());
+                    User us=model.userById(to.getText());
+                    statusError.setText("Сообщение для "+us.getLastName()+" "+us.getFirstName()+" "+us.getSecondName()+" отправленно ");
+                    cleanMessageForm();
+                    return;
+                } else {
                     statusError.setText("Данный получатель отсутствует");
                     return;
                 }
-            }
-            catch (Exception e){
+            } catch (Exception e){
                 statusError.setText("Типы данних получателя не верний");
             }
+
         }
-        User us=model.userById(to.getText());
-        statusError.setText("Сообщение для "+us.getLastName()+" "+us.getFirstName()+" "+us.getSecondName()+" отправленно ");
-        cleanMessageForm();
+
     }
 
     private boolean cleanMessageForm() {
@@ -235,6 +257,7 @@ public class MainController implements Initializable {
     }
 
     public void openRegistration(ActionEvent actionEvent) {
+
         model.openRegistrationWindow();
     }
 }
