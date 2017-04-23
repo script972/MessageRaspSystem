@@ -27,7 +27,18 @@
                         <TextField fx:id="to" layoutX="119.0" layoutY="52.0" prefHeight="25.0" prefWidth="53.0" />
                         <TextArea fx:id="message" layoutX="119.0" layoutY="93.0" prefHeight="239.0" prefWidth="231.0" />
                          <Label fx:id="statusError" layoutX="28.0" layoutY="334.0" prefHeight="43.0" prefWidth="216.0" textAlignment="RIGHT" wrapText="true" />
-                        <RadioButton fx:id="radioSpam" layoutX="183.0" layoutY="56.0" mnemonicParsing="false" text="RadioButton" />
+                        <RadioButton fx:id="radioSpam" layoutX="183.0" layoutY="56.0" mnemonicParsing="false" text="спам" />
+                        <TableView fx:id="reciveMessage" layoutX="350.0" layoutY="10.0" prefHeight="380.0" prefWidth="461.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columns>
+                            <TableColumn fx:id="reciveID" prefWidth="75.0" text="Id получателя" />
+                            <TableColumn fx:id="reciveLastName" prefWidth="75.0" text="Фамилия" />
+                            <TableColumn fx:id="reciveFirstName" prefWidth="75.0" text="Имя" />
+                            <TableColumn fx:id="reciveSecondName" prefWidth="75.0" text="Отчество" />
+                            <TableColumn fx:id="reciveSubject" prefWidth="75.0" text="Тема" />
+                            <TableColumn fx:id="reciveText" prefWidth="75.0" text="Сообщение" />
+                            <TableColumn fx:id="reciveDate" prefWidth="75.0" text="Дата" />
+                          </columns>
+                        </TableView>
 
 
                      </children>
@@ -39,7 +50,7 @@
               <AnchorPane fx:id="RaiodSubject" minHeight="0.0" minWidth="0.0" prefHeight="407.0" prefWidth="722.0">
                      <children>
                         <Label fx:id="minimumUser" layoutX="483.0" layoutY="11.0" onMouseClicked="#minUser" prefHeight="37.0" prefWidth="211.0" text="Пользователь длина письма которого найменьшая" textFill="RED" textOverrun="CLIP" wrapText="true" />
-                        <Label fx:id="minimumUser" layoutX="427.0" layoutY="62.0" />
+                        
 
 
 

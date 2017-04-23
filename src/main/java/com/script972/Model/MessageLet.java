@@ -17,6 +17,7 @@ public class MessageLet {
     private String LastNameRecip;
     private String SecondNameRecip;
 
+
     public MessageLet(int id, String subject, String text, Date dateSend, String firstNameSend, String lastNameSend, String secondNameSend, String firstNameRecip, String lastNameRecip, String secondNameRecip) {
         this.id = id;
         this.subject = subject;

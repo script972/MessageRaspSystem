@@ -20,6 +20,12 @@ public class DBManipulate {
     private static final String MESSAGEBYAUR="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
             "    WHERE sender=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+    private static final String MESSAGEBYRECIPIENTID="SELECT senduser.id ,sender, recipient, subject, text, dateSend, senduser.FirstName,\n" +
+            "  senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
+            "FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
+            "WHERE recipient=?  AND sender=senduser.id AND recipient=recuser.id ORDER BY dateSend DESC";
+
+
 
     private static final String MESSAGEBYLASTNAME="    SELECT message.id, sender, recipient, subject, text, dateSend, senduser.FirstName, senduser.LastName, senduser.SecondName, recuser.FirstName, recuser.LastName, recuser.SecondName\n" +
             "    FROM letter.message, letter.user as senduser, letter.user as recuser\n" +
@@ -371,6 +377,44 @@ public class DBManipulate {
         close();
 
         return list;
+    }
+
+    public ArrayList<MessageLet> getMessageByRecipientID(String auther) throws SQLException {
+        ArrayList<MessageLet> al=new ArrayList<MessageLet>();
+        connect();
+        PreparedStatement preparedStatement = conn.prepareStatement(MESSAGEBYRECIPIENTID);
+        preparedStatement.setInt(1, Integer.parseInt(auther));
+        ResultSet rs = preparedStatement.executeQuery();
+        int id;
+        String subject;
+        String text;
+        java.sql.Date dateSend;
+        String FirstNameSend;
+        String LastNameSend;
+        String SecondNameSend;
+        String FirstNameRecip;
+        String LastNameRecip;
+        String SecondNameRecip;
+
+
+        while (rs.next()) {
+            id=rs.getInt("id");
+            subject=rs.getString("subject");
+            text=rs.getString("text");
+            dateSend=rs.getDate("dateSend");
+            FirstNameSend = rs.getString("FirstName");
+            LastNameSend=rs.getString("LastName");
+            SecondNameSend=rs.getString("SecondName");
+
+            FirstNameRecip = rs.getString(10);
+            LastNameRecip=rs.getString(11);
+            SecondNameRecip=rs.getString(12);
+            MessageLet ms=new MessageLet(id, subject, text, dateSend, FirstNameSend, LastNameSend, SecondNameSend, FirstNameRecip, LastNameRecip, SecondNameRecip);
+            al.add(ms);
+        }
+        preparedStatement.close();
+        close();
+        return al;
     }
 
     public int createNewUser(String lastName, String firstName, String secondName, String password) throws SQLException {

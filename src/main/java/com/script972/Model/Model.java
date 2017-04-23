@@ -171,4 +171,13 @@ public class Model  {
         }
         return false;
     }
+
+    public ArrayList<MessageLet> myMessage(String text) {
+        try {
+            return dbManipulate.getMessageByRecipientID(text);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

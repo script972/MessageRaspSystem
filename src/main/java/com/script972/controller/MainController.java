@@ -3,7 +3,6 @@ package com.script972.controller;
 import com.script972.Model.MessageLet;
 import com.script972.Model.Model;
 import com.script972.Model.User;
-import com.script972.Windows.WindowsControl;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -12,9 +11,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.stage.Stage;
 
 import java.net.URL;
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -59,13 +58,8 @@ public class MainController implements Initializable {
     @FXML
     RadioButton RadioSubject;
 
-
-
-
     private ObservableList<MessageLet> messageData = FXCollections.observableArrayList();
-
-
-
+    private ObservableList<MessageLet> messageRecive = FXCollections.observableArrayList();
 
     /*Таблица на 1 ТАБ*/
     @FXML
@@ -105,6 +99,31 @@ public class MainController implements Initializable {
     private TextField registerPassword;
     @FXML
     private Label unewID;
+
+
+    /*reciveMessage*/
+    @FXML
+    private TableView<MessageLet> reciveMessage;
+    @FXML
+    private TableColumn<MessageLet, Integer> reciveID;
+    @FXML
+    private TableColumn<MessageLet, String> reciveLastName;
+    @FXML
+    private TableColumn<MessageLet, String> reciveFirstName;
+    @FXML
+    private TableColumn<MessageLet, String> reciveSecondName;
+    @FXML
+    private TableColumn<MessageLet, String> reciveSubject;
+    @FXML
+    private TableColumn<MessageLet, String> reciveText;
+    @FXML
+    private TableColumn<MessageLet, Date> reciveDate;
+
+
+    /*Count MEssage*/
+
+
+
 
 /*///Таблица на 1 ТАб*/
 
@@ -176,6 +195,23 @@ public class MainController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         try {
             uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());
+
+
+            TableMessage.getItems().clear();
+            ArrayList<MessageLet> list = model.myMessage(String.valueOf(model.getUser().getId()));
+            messageRecive.addAll(list);
+            reciveID.setCellValueFactory(new PropertyValueFactory<MessageLet, Integer>("id"));
+            reciveLastName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("LastNameSend"));
+            reciveFirstName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("FirstNameSend"));
+            reciveSecondName.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("SecondNameSend"));
+
+            reciveSubject.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("subject"));
+            reciveText.setCellValueFactory(new PropertyValueFactory<MessageLet, String>("text"));
+            reciveDate.setCellValueFactory(new PropertyValueFactory<MessageLet, java.sql.Date>("dateSend"));
+            reciveMessage.setItems(messageRecive);
+
+
+
         }
         catch (Exception e){
         }
@@ -222,10 +258,10 @@ public class MainController implements Initializable {
             }
     }
 
-
     public void minUser(MouseEvent mouseEvent) {
         User minLetter=model.minimumSizeLetter();
-        minimumUser.setText(" = "+minLetter.getLastName()+" "+minLetter.getFirstName()+" "+minLetter.getSecondName()+" ID "+ minLetter.getId());
+        minimumUser.setText(minimumUser.getText()+ "\n = "+minLetter.getLastName()+" "+minLetter.getFirstName()
+                +" "+minLetter.getSecondName()+" ID "+ minLetter.getId());
 
     }
 
@@ -236,12 +272,6 @@ public class MainController implements Initializable {
     public void chooseRadioSubject(ActionEvent actionEvent) {
         RadioAuther.setSelected(false);
     }
-
-
-
-
-
-
 
 
     /*REGISTRATION*/
