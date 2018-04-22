@@ -2,10 +2,12 @@ package com.script972.Model;
 
 import com.script972.Windows.RegisterWindows;
 import com.script972.Windows.WindowsControl;
+import com.script972.dao.DBManipulate;
+import com.script972.entity.MessageLet;
+import com.script972.entity.User;
 import javafx.stage.Stage;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**

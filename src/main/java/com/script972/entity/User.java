@@ -1,4 +1,4 @@
-package com.script972.Model;
+package com.script972.entity;
 
 import java.util.Date;
 

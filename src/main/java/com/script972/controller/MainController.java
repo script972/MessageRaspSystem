@@ -1,8 +1,9 @@
 package com.script972.controller;
 
-import com.script972.Model.MessageLet;
+import com.script972.entity.Logs;
+import com.script972.entity.MessageLet;
 import com.script972.Model.Model;
-import com.script972.Model.User;
+import com.script972.entity.User;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -117,6 +118,28 @@ public class MainController implements Initializable {
     private TableColumn<MessageLet, Date> reciveDate;
 
 
+    /**
+     * Таблица логов
+     */
+
+    private ObservableList<Logs> logsCount = FXCollections.observableArrayList();
+    @FXML
+    private TableView<Logs> tableLogs;
+    @FXML
+    private TableColumn<Logs, Long> idlogs;
+    @FXML
+    private TableColumn<Logs, Long> actionPersonDoLogs;
+    @FXML
+    private TableColumn<Logs, Long> actionPersonLogs;
+    @FXML
+    private TableColumn<Logs, Date> dateLogs;
+    @FXML
+    private TableColumn<Logs, String> actionLogs;
+
+
+
+
+
     /*Count MEssage*/
     @FXML
     private TableView<User> AboutUserAndLetter;
@@ -157,6 +180,7 @@ public class MainController implements Initializable {
     }
 
     public void sendMessage(ActionEvent actionEvent) {
+        //TODO
 
         /*uData.setText("Ти есть "+String.valueOf(model.getUser().getFirstName())+" твой ID "+model.getUser().getId());*/
 //        int toS=Integer.valueOf(to.getText());
@@ -298,12 +322,11 @@ public class MainController implements Initializable {
     /*REGISTRATION*/
     public void register(ActionEvent actionEvent) {
         String lastName = registerLastName.getText();
-        String firstName = registerFirstName.getText();
-        String secondName = registerSecondName.getText();
-        String password = registerPassword.getText();
+        String firstName = registerFirstName.getText().toString();
+        String secondName = registerSecondName.getText().toString();
+        String password = registerPassword.getText().toString();
         unewID.setText("");
         unewID.setText("Ваш ID= " + String.valueOf(model.registerNewPerson(lastName, firstName, secondName, password)));
-
 
     }
 
